@@ -1,0 +1,9 @@
+.panel-default>.panel-heading {
+  background-color: #C0C5C8;
+  padding: 10px;
+  margin: 10px;
+}
+
+.container-fluid div {
+  margin: 10px;
+}

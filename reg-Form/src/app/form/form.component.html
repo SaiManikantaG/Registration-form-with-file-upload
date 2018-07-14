@@ -1,0 +1,87 @@
+<div class="panel panel-default">
+  <div class="panel-heading custom_class">
+    <h1>
+      Sample
+      <small class="text-muted"> Registration Form</small>
+    </h1>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <form #userform="ngForm" (Submit)="Submit(userform)">
+        <div class="form-group">
+          <label for="name">
+            <b>Full Name</b>
+          </label>
+          <input type="text" class="form-control" name="name" [(ngModel)]="userModel.name">
+        </div>
+        <div class="form-group">
+          <label for="wsu">
+            <b>ID</b>
+          </label>
+          <input type="text" class="form-control" name="wsu" [(ngModel)]="userModel.wsu">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">
+            <b>Phone Number</b>
+          </label>
+          <input type="number" class="form-control" name="phone" [(ngModel)]="userModel.phone">
+        </div>
+
+        <div class="form-group">
+          <label for="email">
+            <b>Email</b>
+          </label>
+          <input type="email" class="form-control" name="email" [(ngModel)]="userModel.email">
+        </div>
+
+
+        <div class="mb-3">
+          <Label>Color</Label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="Color" value="Grey" [(ngModel)]="userModel.Color">
+            <label class="form-check-label">Grey</label>
+          </div>
+          <div class="radio">
+            <input class="radio-input" type="radio" name="Color" value="Black" [(ngModel)]="userModel.Color">
+            <label class="radio-label"> Black</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="details">
+            <b>Additional Details</b>
+          </label>
+          <textarea class="form-control" name="details" [(ngModel)]="userModel.details"></textarea>
+        </div>
+
+        <div class="form-check mb-3">
+          <input class="form-check-input" name="Subscribe" type="checkbox" [(ngModel)]="userModel.Subscribe">
+          <label class="form-check-label">
+            <u>Agree to Policy</u>
+            <p>By signing below, I affirm that agree to the Policy.</p>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="sign">
+            <b>Signature</b>
+          </label>
+          <input type="sign" class="form-control" name="sign" [(ngModel)]="userModel.sign">
+        </div>
+        <!-- <input type="file" (change)="onFileSelected($event)"> -->
+        <br>
+        <br>
+        <!-- Sai File Create-->
+        <input type="file" id="inputGroupFile01" (change)="onFileSelected($event)">
+        <!-- Sai File Create End-->
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit" (click)="submit()"> Submit </button>
+      </form>
+    </div>
+  </div>
+</div>
