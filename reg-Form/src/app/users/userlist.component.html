@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="display-3">
+      <var>User List</var>
+    </h3>
+  </div>
+</div>
+
+<br/>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Id</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phonne</th>
+      <th scope="col">Color</th>
+      <th scope="col">Additional Detail</th>
+      <th scope="col">File Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let some of usrListData">
+      <td>{{some.name}}</td>
+      <td>{{some.wsu}}</td>
+      <td>{{some.email}}</td>
+      <td>{{some.phone}}</td>
+      <td>{{some.Color}}</td>
+      <td>{{some.details}}</td>
+      <td>{{some.FileName}}</td>
+    </tr>
+  </tbody>
+</table>

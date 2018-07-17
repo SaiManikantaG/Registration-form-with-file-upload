@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { FormPoster } from '../service/form-post.service';
-import { NgForm } from '../../../node_modules/@angular/forms';
+import { NgForm } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -27,6 +27,6 @@ export class FormComponent implements OnInit {
     // method parameters includes userdata and also file detail properties
     this.formpost.postForm(this.userModel, this.selectedFileProp);
     alert(` Successfully Saved The Form`);
-    window.location.reload();
+    window.location.replace('/userlist');
   }
 }

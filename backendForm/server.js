@@ -21,6 +21,15 @@ app.get('/', (req, res) => {
   res.send('hello world')
 })
 
+// get all users
+app.get('/usersList', function (req, res) {
+  User.find({}, function (err, users) {
+    var userMap = {};
+    console.log(users)
+    res.send(users);
+  });
+});
+
 // Sai Create & Send Email Endpoint
 app.post('/create', (req, res) => {
 
@@ -35,8 +44,8 @@ app.post('/create', (req, res) => {
 
       // Really BAD Basic AUTH, need to change this to OAuth
       auth: {
-        user: `AddUser@Email.com`, // generated ethereal user
-        pass: `User@Password` // generated ethereal password
+        user: `Add@your.email`, // generated ethereal user
+        pass: `AddYourPassword` // generated ethereal password
       },
       tls: {
         rejectUnauthorized: false,
@@ -45,8 +54,8 @@ app.post('/create', (req, res) => {
     // get file extension
     // setup email data with unicode symbols
     let mailOptions = {
-      from: '"Register App 👻" <register@example.com>', // sender address
-      to: 'AddYour@User.email', // list of receivers
+      from: '"Register App 👻" Add@your.email', // sender address
+      to: 'Add@your.email', // list of receivers
       subject: 'Hello ✔', // Subject line
       text: 'Hello world?', // plain text body
       html: `<b>Hello world?</b> 
@@ -120,7 +129,7 @@ app.post('/upload/:name', function uploadAudio(req, res) {
 
 
 
-mongoose.connect('<<Add your MONGODB connection string here>>', {
+mongoose.connect('<<ADD your MongoDB connection string here>>', {
   useNewUrlParser: true
 }, (err) => {
   if (!err)
