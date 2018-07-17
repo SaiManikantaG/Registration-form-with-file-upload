@@ -1,6 +1,6 @@
 ## Registration form with file upload option
 
-- forwards the entered user details and uploaded file to the selected email (Just a basic authentication; Can be implemented with OAuth 1.0 or OAuth 2.0)
+Forwards the entered user details and uploaded file to the selected email (Just a basic authentication; Can be implemented with OAuth 1.0 or OAuth 2.0)
 
 Details :
 - [X] Used Bootstrap
